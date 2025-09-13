@@ -1,0 +1,133 @@
+<!-- Example App: what you can do after finishing the three web development courses -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+   <meta charset="UTF-8">
+   <title>Example App</title>
+   <link rel="icon" href="media/logo.jpg">
+   <link rel="stylesheet" href="./css/normalize.css">
+   <link rel="stylesheet" href= "./css/demo.css">
+   <link rel="stylesheet" href="./css/form.css">
+   <script src="./js/exampleSearch.js"> </script>
+   <script src="./js/exampleValid.js"></script>
+   <script src="./js/exampleDOM.js"></script>
+</head>
+<body>
+   <div class="container logo">
+      <header>
+        <h1> 
+            <a href="index.html"> <img src='./media/logo.jpg' style="height: 40px; width: 40px;" alt="CCA Logo"></a>
+                Example Application
+        </h1>
+      </header>
+      <nav>
+         <ul>
+            <li> <a href="index.html"> Home </a> </li>
+            <li> <a href="web1.html"> Web1 </a> </li>
+            <li> <a href="web2.html"> Web2 </a> </li>
+            <li> <a href="web3.html"> Web3 </a> </li>
+            <li><a href="exampleApp.html">Example App</a></li>
+            <li> <a href="#"> Resources </a>
+                <ul>
+                    <li><a href="https://validator.w3.org/" target="_blank"> HTML5 validator </a></li>
+                    <li><a href="https://jigsaw.w3.org/css-validator/ " target="_blank"> CSS Validator </a></li>
+                </ul>
+            </li>
+         </ul>
+      </nav>
+      <aside>
+        <br>
+        <ul>
+            <li> 
+               <b> E-mail:</b> <u>info.CanadianCampus@gmail.com</u> <br> <br>
+            </li>
+            <li><b>WeChat ID: </b> CanadianCampus</li> <br>
+            <li><b>WeChat QR Code:</b> <br> &nbsp; &nbsp; &nbsp;
+            <img src="./media/WeChatID_CandianCampus_qrCode.png" 
+                style="width:50%; height: 50%;" 
+                alt = "WeChat ID: CanadianCampus">
+            </li>
+        </ul>
+      </aside>
+
+      <section class="main">
+        <article>
+           <section>
+              <h2 class="courseTitle"> Example Application</h2>
+              <p>The following three(3) examples will give you some idea of what you can implement after finishing these web development courses. </p>
+              <p>Absolutely, the courses cover much more. You'll be capable of doing more fantastic jobs.</p>
+           </section>
+           <hr>
+           <section>
+               <h2>Small tricks with DOM</h2>
+               <button onclick="highlight();">Click this to see what may happen </button>
+               <p onmouseover="mouseOver(this);" onmouseout="mouseOut(this);"> 
+                  Move the mouse over and out of this to see the result :)</p>
+            </section>
+           <hr>
+           <h2> Book Search</h2>
+           <section>
+              <p>Leave the search box empty and click "Search" button, you'll get all the books in the book store.
+               Then you can search by full or partial of <b>book title</b>, or <b>author name</b>. 
+              </p>
+          </section>
+
+            <input type="text" name="key" id="key"  
+               placeholder="Input full or partial of book title, or author name to search.">
+            <!-- <button onclick="search();">Search by Course Code</button> -->
+            <!-- <button onclick="clearResult();">Clear Search Result</button> -->
+            <button id="searchButton">Search</button>
+            <!-- <img id="searchButton" src="./media/search-icon.jpg" alt="Search" width="30px" height="30px"> -->
+            <button id="clearResult">Clear Search Result</button>
+            <div id="result"></div>
+        <hr>
+           
+            <!-- <form method="POST" name="register" id="register" 
+            action="mailto:info.canadianCampus@gmail.com"
+            enctype="multipart/form-data"
+            onsubmit="return valid();">  -->
+            <h2> Course Registration</h2>
+           <!-- <form name="register" method="POST" id="register" action="https://httpbin.org/post"
+                  onsubmit="return valid();">   -->
+            <form name="register" method="POST" data-netlify="true">
+               <!-- Hidden inpuit needed by Netlify-->
+               <input type="hidden" name="form-name" value="register"
+                  action="/formSubmission.html">        
+               <fieldset class="fieldset">
+                  <legend>Course Registration</legend>
+                <p>Name can only include alphabet uppercase, lowercase, apostrope('), and white space.</p>
+                <label><span class="star">*</span>Name: </label> 
+                <input type="text" id="name" name="name"
+                      placeholder="Input your Name" required>  <br>
+                <span id="errName"></span>
+                <br>
+                <label><span class="star">*</span>Email:</label>
+                <input type="email" name="email" placeholder="Input your email." required> <br>
+                <label><span class="star">*</span>WeChat ID: </label>
+                <input type="text" name="weChatID" 
+                        placeholder="Input your WeChat ID." required > <br>
+                <label><span class="star">*</span>Select Course:</label>
+                <select name="selectCourse" size=3 multiple required >
+                  <option value="web1">Web1: HTML5</option>
+                  <option value="web2">Web2: CSS</option>
+                  <option value="web3">Web3: JavaScript</option>
+                </select> <br>
+                <label><span class="star">*</span>Credit Card#:</label>
+                <input type="number" name="cardNum" min=40000000000000 max=49999999999999
+                        title="input 14-digit credit card number,starting with digit 4" required> <br>
+                <label>Comment:</label>
+                <textarea> </textarea> <br>
+                <button class='submit' type="submit"> Submit </button>
+                <button class='reset' type="reset"> Reset </button>
+               </fieldset>           
+           </form>
+        </article>
+      </section>
+      <footer>
+        <p style="text-align: center;"> &copy; 2022 Canadian Campus Awareness Inc. (CCA) </p>
+      </footer>
+   </div>
+
+
+</body></html>

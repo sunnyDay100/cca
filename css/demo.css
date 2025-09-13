@@ -1,0 +1,128 @@
+/* body{
+    background-image: url('../img/logo.jpg');
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: left top;
+} */
+
+body{
+    background: url('../img/logo.jpg') 100px 100px no-repeat left top lightgray;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    background-color: lightgray;
+    /* color: blue; */
+}
+header{
+    background-color: #ddd;
+    padding:5px 25px; /*5px: top & bottom, 25px: left & right*/
+    text-align: center;
+}
+
+nav{
+    padding:8px;
+    background-color: #444;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;  /*remove ul bullets*/
+    padding-left:20px;
+    margin:0px;
+}
+
+nav ul li{
+    display:inline-block; /* horizontal display*/
+    background-color: #444;
+   /*  position: relative; */
+}
+
+/* contextual selectors */
+nav ul li a{
+    background-color: #444;
+    color: #eee;
+    text-decoration: none; /* remove underline of hyperlink*/
+    padding:0 5px;	
+    font-weight:bold;
+    text-transform: uppercase;
+    font-size:13px;
+}
+
+nav ul li a:hover{
+    background-color: #222;
+    color: #fff;
+}
+
+
+
+
+
+/* begin: 2nd level menu  */
+nav ul li ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+    visibility: hidden; 
+    transition: opacity 0.2s;
+    position: absolute;
+    width: 150px;
+    background-color: #444;
+}
+
+nav ul li:hover ul{
+    display: block;
+    padding: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul li ul li{
+    width: 100%;
+}
+
+/* end: 2nd level menu  */
+aside{
+    float: left;
+    width: 30%;
+    margin-right:20px;
+}
+
+
+.main{
+    float:left;
+    /* width: 550px; */
+    width: 50%;
+    padding-bottom:10px;
+    margin-right:20px;
+}
+
+.ads{
+    width:10%;
+    float: left;
+    position:fixed;
+    right:0;
+    top:0;
+    /*width:180px; */
+    
+}
+
+footer{
+    clear:both;
+    background-color: #444;
+    color: #eee;
+    padding:10px;
+}
+
+footer h2{
+    margin:0px;
+    text-transform: uppercase;
+    font-size:13px;
+    padding:0 5px;	
+}
+
+/* .courseTitle{color:crimson;}
+.highLight{background-color:azure; color:crimson;}
+.star{color: crimson;}
+.fieldset{ padding:2em;} */
